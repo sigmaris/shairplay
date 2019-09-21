@@ -1,6 +1,7 @@
 shairplay (0.9.0+git20180824.096b61a-1~buster) buster; urgency=medium
 
-  * Rebuild for buster
+  * Add missing libavahi-compat-libdnssd-dev build-dep
+  * Repackage for buster
 
  -- Hugh Cole-Baker <sigmaris@gmail.com>  Sat, 21 Sep 2019 16:24:47 +0100
 

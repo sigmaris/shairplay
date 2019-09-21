@@ -2,7 +2,7 @@ Source: shairplay
 Section: net
 Priority: extra
 Maintainer: wsnipex <wsnipex@a1.net>
-Build-Depends: debhelper (>= 9.0.0), autotools-dev, libao-dev, pkg-config, autoconf, automake, libtool
+Build-Depends: debhelper (>= 9.0.0), autotools-dev, libao-dev, libavahi-compat-libdnssd-dev, pkg-config, autoconf, automake, libtool
 Standards-Version: 3.9.3
 Homepage: https://github.com/juhovh/shairplay
 Vcs-Git: git://github.com/juhovh/shairplay
