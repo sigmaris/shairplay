@@ -3,6 +3,7 @@ shairplay (0.9.0+git20180824.096b61a-2~buster) buster; urgency=medium
   * Add missing libavahi-compat-libdnssd-dev build-dep
   * Update debhelper compat version
   * Remove use of debhelper autotools-dev
+  * Remove rpath from shairplay binary
   * Repackage for buster
 
  -- Hugh Cole-Baker <sigmaris@gmail.com>  Sat, 21 Sep 2019 16:24:47 +0100

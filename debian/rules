@@ -23,3 +23,7 @@ DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
 override_dh_auto_configure:
 	dh_auto_configure -- --disable-static
+
+override_dh_auto_install:
+	dh_auto_install
+	chrpath -d debian/tmp/usr/bin/shairplay
