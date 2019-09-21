@@ -1,0 +1,20 @@
+diff --git a/src/shairplay.c b/src/shairplay.c
+index 4b873f1..1ff18a5 100644
+--- a/src/shairplay.c
++++ b/src/shairplay.c
+@@ -348,9 +348,12 @@ main(int argc, char *argv[])
+ 
+ 	raop = raop_init_from_keyfile(10, &raop_cbs, "airport.key", NULL);
+ 	if (raop == NULL) {
+-		fprintf(stderr, "Could not initialize the RAOP service\n");
+-		fprintf(stderr, "Please make sure the airport.key file is in the current directory.\n");
+-		return -1;
++		raop = raop_init_from_keyfile(10, &raop_cbs, "/etc/shairplay/airport.key", NULL);
++		if (raop == NULL) {
++			fprintf(stderr, "Could not initialize the RAOP service\n");
++			fprintf(stderr, "Please make sure the airport.key file is in the current directory or /etc/shairplay/.\n");
++			return -1;
++		}
+ 	}
+ 
+ 	if (strlen(options.password)) {
